@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Registration Page</title>
+ <style>
+   body {
+     font-family: Arial, sans-serif;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+     margin: 0;
+     background-color: #f4f4f9;
+   }
+   .form-container {
+     background-color: #fff;
+     padding: 20px;
+     border-radius: 10px;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+     width: 300px;
+   }
+   .form-container h2 {
+     text-align: center;
+     color: #333;
+   }
+   label {
+     display: block;
+     margin-top: 10px;
+     font-weight: bold;
+   }
+   input, select {
+     width: 100%;
+     padding: 10px;
+     margin-top: 5px;
+     border-radius: 5px;
+     border: 1px solid #ccc;
+   }
+   button {
+     width: 100%;
+     padding: 10px;
+     margin-top: 15px;
+     background-color: #4caf50;
+     color: white;
+     border: none;
+     border-radius: 5px;
+     cursor: pointer;
+   }
+   button:hover {
+     background-color: #45a049;
+   }
+ </style>
+</head>
+<body>
+ <div class="form-container">
+   <h2>Registration Form</h2>
+   <form action="#" method="POST">
+     <label for="first-name">First Name:</label>
+     <input type="text" id="first-name" name="first-name" required>
+     <label for="last-name">Last Name:</label>
+     <input type="text" id="last-name" name="last-name" required>
+     <label for="email">Email:</label>
+     <input type="email" id="email" name="email" required>
+     <label for="password">Password:</label>
+     <input type="password" id="password" name="password"
+            pattern="^(?=.*\d)(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9]).{8,}$"
+            title="Password must contain at least one number, one letter, one special character, and be at least 8 characters long."
+            required>
+     <label for="gender">Gender:</label>
+     <select id="gender" name="gender" required>
+       <option value="">Select</option>
+       <option value="male">Male</option>
+       <option value="female">Female</option>
+       <option value="other">Other</option>
+     </select>
+     <button type="submit">Register</button>
+   </form>
+ </div>
+</body>
+</html>
